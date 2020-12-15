@@ -1,0 +1,355 @@
+@import url(fonts.css);
+
+/* General styles */
+.shower {
+    font: 25px/2 'Ubuntu', sans-serif;
+    color: #404040;
+    line-height: 1.7;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    height: 1px; width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* Slide */
+.slide {
+    font-size: 46px;
+}
+
+.slide .small-text {
+    font-size: 32px;
+}
+
+.slide.chapter {
+    background: #367273;
+}
+
+.slide.attention {
+    background: #b81348;
+    color: #fff;
+}
+
+
+/* Slide numbers */
+.slide::after {
+    top: 25px;
+    right: 50px;
+    width: 80px;
+    height: 80px;
+    background: #b81348;
+    font-weight: 700;
+    border-radius: 50%;
+    padding-top: 0.35em;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 34px;
+}
+
+.slide.chapter::after {
+    background: #fff;
+    color: #367273;
+}
+
+.slide.attention::after {
+    background: #fff;
+    color: #b81348;
+}
+
+
+/* Headings */
+.slide h2 {
+    font: 800 68px/1 'Montserrat', sans-serif;
+    color: #666;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.slide.chapter h2,
+.slide.attention h2 {
+    color: #fff;
+}
+
+.caption h1 {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -3px;
+}
+
+
+/* Lists */
+.slide ul>li,
+.slide ol>li {
+    text-indent: 0;
+    position: relative;
+}
+
+.slide ul>li::before {
+    padding-right: 0;
+    content: '';
+    position: absolute;
+    width: 0.3em;
+    height: 0.3em;
+    border-radius: 50%;
+    background-color: #367273;
+    top: 0.8em;
+    left: -0.7em;
+}
+
+.slide ol li::before {
+    color: #9f9f9f;
+}
+
+.slide.attention ul>li::before {
+    background-color: #fff;
+}
+
+.slide ol.checklist {
+    margin-left: 1.1em;
+}
+
+.slide ol.checklist li::before {
+    counter-increment: list;
+    content: counter(list);
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: #367273;
+    color: #fff;
+    border-radius: 50%;
+    left: -80px;
+    top: 11px;
+    padding-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 35px;
+}
+
+
+/* Shout */
+.slide .shout {
+    font-size: 80px;
+}
+
+
+/* Links */
+.slide a {
+    color: #3079C2;
+}
+
+.slide.attention a {
+    color: #c9daec;
+}
+
+.chapter.slide .cover+figcaption {
+    color: #fff;
+}
+
+.chapter.slide .cover+figcaption a {
+    color: #fff;
+}
+
+.slide a.image-link {
+    text-decoration: none;
+    background: none;
+}
+
+
+/* Figcaption */
+.slide figcaption {
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    font-size: 12px;
+    opacity: .7;
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    -webkit-transform: translateX(100%) rotate(-90deg);
+    transform: translateX(100%) rotate(-90deg);
+}
+
+.slide figcaption a {
+    color: currentcolor;
+}
+
+/* Code */
+.slide code, .slide kbd, .slide samp {
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+code .arrow-left {
+    transform: rotate(180deg);
+    display: inline-block;
+}
+
+/* Note */
+.slide p.note {
+    color: #9f9f9f;
+}
+
+
+/* Blockquote */
+.slide blockquote::before {
+    font-size: 3em;
+    font-family: 'Montserrat', sans-serif;
+    margin: -0.1em 0 0 -.5em;
+}
+
+/* Screen reader list */
+ul.screen-reader-list {
+    margin-top: 1.4em;
+}
+
+ul.screen-reader-list li {
+    margin-bottom: 1em;
+}
+
+ul.screen-reader-list li > span:first-child {
+    width: 130px;
+    display: inline-block;
+    font-weight: 700;
+    text-align: right;
+    margin-right: 0.5em;
+}
+
+ul.screen-reader-list li::before {
+    display: none;
+}
+
+.demo .steps {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.steps {
+    display: flex;
+    align-items: center;
+}
+
+.steps li {
+    background-color: #9f9f9f;
+    color: #fff;
+    border-radius: 50%;
+    width: 1.5em;
+    height: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.steps .done {
+    background-color: #367273;
+}
+
+.steps .partly-done {
+    background-color: #f6b665;
+}
+
+
+.steps .highlight {
+    background-color: #b81348;
+}
+
+.steps .hidden {
+    visibility: hidden;
+}
+
+.steps li:not(:last-child) {
+    margin-right: 0.5em;
+}
+
+ul.steps li::before {
+    display: none;
+}
+
+.steps svg {
+    width: 0.8em;
+    height: 0.8em;
+    display: block;
+    fill: #fff;
+}
+
+.slide.blur {
+    filter: blur(3px);
+}
+
+.slide.dark::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 10;
+}
+
+.slide .a11y-controls {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    line-height: 0;
+    top: 130px;
+    right: 77px;
+    font-size: 30px;
+}
+
+.a11y-controls li {
+    width: 1em;
+    height: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.a11y-controls li:not(:last-child) {
+    margin-bottom: 0.5em;
+}
+
+.slide .a11y-controls li::before {
+    display: none;
+}
+
+.a11y-controls input[type="checkbox"] {
+    display: none;
+}
+
+.a11y-controls svg {
+    width: 1em;
+    height: 1em;
+    cursor: pointer;
+    fill: #9f9f9f;
+    z-index: 11;
+    position: relative;
+}
+
+.a11y-controls input[type="checkbox"]:checked ~ svg {
+    fill: #b81348;
+}
+
+.a11y-controls .a11y-controls__dark[type="checkbox"]:checked ~ svg {
+    fill: #fff;
+    filter: drop-shadow(0px 0px 7px #fafaa2);
+}
+
+.counter {
+    margin-top: 4em;
+}
+
+.counter-result {
+    position: absolute;
+    font-size: 10em;
+    font-weight: 500;
+    top: 100px;
+    right: 200px;
+    opacity: 0.4;
+    line-height: 1;
+}
