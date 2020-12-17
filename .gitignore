@@ -1,2 +1,4 @@
 .idea
 *.zip
+.DS_store
+*/.DS_store
