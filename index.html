@@ -432,8 +432,7 @@
             <path d="M32,127.991c0,18.385-13.614,32-32,32c18.387,0,32,13.614,32,32c0-18.386,13.614-32,32-32
                         C45.614,159.991,32,146.376,32,127.991z"></path>
                 </symbol>
-            </svg>
-
+    </svg>
     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none" xml:space="preserve">
 	   <symbol id="psd" viewBox="0 0 550.801 550.801">
 		   <path d="M488.426,197.019H475.2v-63.816c0-0.401-0.063-0.799-0.116-1.205c-0.021-2.534-0.827-5.023-2.562-6.992L366.325,3.691
@@ -771,7 +770,7 @@
 			c0.397,0.396,0.936,0.62,1.498,0.62s1.1-0.224,1.497-0.62l38.374-38.374l38.374,38.374c0.397,0.396,0.937,0.62,1.498,0.62
 			s1.101-0.224,1.498-0.62l5.473-5.476c0.826-0.827,0.826-2.167,0-2.994L55.931,47.463z"></path>
 		</symbol>
-   </svg>
+    </svg>
 
     <header class="caption">
         <h1>Разработка доступных интерфейсов️</h1>
@@ -2003,6 +2002,31 @@
         </style>
     </section>
 
+    <section class="slide demo" id="modal-markup-code-after2">
+        <ul class="steps">
+            <li class="done">
+                <svg><use xlink:href="#psd"></use></svg>
+            </li>
+            <li class="done">
+                <svg><use xlink:href="#code"></use></svg>
+            </li>
+        </ul>
+
+        <pre>
+            <code><mark>&lt;button aria-expanded="false"&gt;</mark></code>
+            <code>   ...</code>
+			<code><mark>&lt;div role="dialog"<br/> aria-modal="true"<br/> aria-label="Modal window"&gt;</mark></code>
+            <code>   ...</code>
+		</pre>
+
+        <style>
+            #modal-markup-code-after2 pre {
+                font-size: 30px;
+                margin-top: 3em;
+            }
+        </style>
+    </section>
+    
     <section class="slide demo" id="modal-screen-reader">
         <ul class="steps">
             <li class="done">
