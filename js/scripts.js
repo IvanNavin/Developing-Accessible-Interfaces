@@ -47,6 +47,7 @@ const weather = new Weather({
 
 
 
+
 // #modal-markup
 const modalNoA11y = new ModalNoA11y({
 	selector: '.js-modal-markup-modal',
