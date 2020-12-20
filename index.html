@@ -925,8 +925,8 @@
                     </svg>
                 </div>
 
-                <span class="js-weather-live-error visually-hidden" aria-live="assertive"></span>
-                <span class="js-weather-live-status visually-hidden" aria-live="assertive"></span>
+                <span class="js-weather-live-error visually-hidden" role="alert" aria-live="assertive"></span>
+                <span class="js-weather-live-status visually-hidden" role="alert" aria-live="assertive"></span>
             </div>
             <div class="js-weather-demo-modal modal"
                  tabindex="-1"
@@ -944,7 +944,7 @@
                                 <li role="option" data-value="2643743">London</li>
                                 <li role="option" data-value="2950159">Berlin</li>
                             </ul>
-                            <span class="select-live visually-hidden" aria-live="assertive"></span>
+                            <span class="select-live visually-hidden" role="alert" aria-live="assertive"></span>
                         </div>
 
                         <div class="modal-controls">
@@ -1437,7 +1437,7 @@
             <button class="js-btn-reset button-screen-reader-inverse" aria-label="Reset counter">
                 <svg><use xlink:href="#reset"></use></svg>
             </button>
-            <span class="js-result counter-result" aria-live="polite">0</span>
+            <span class="js-result counter-result" role="marquee" aria-live="polite">0</span>
         </div>
 
         <style>
@@ -2464,7 +2464,7 @@
                     <li role="option" data-value="icon-london">London</li>
                     <li role="option" data-value="icon-berlin">Berlin</li>
                 </ul>
-                <span class="select-live visually-hidden" aria-live="assertive"></span>
+                <span class="select-live visually-hidden" role="alert" aria-live="assertive"></span>
             </div>
         </div>
 
@@ -2561,49 +2561,48 @@
         </ul>
 
         <div class="container">
-            <div class="js-weather-markup weather" aria-labelledby="js-weather-markup-label">
-                <h3 id="js-weather-markup-label" class="visually-hidden">Weather widget.</h3>
+            <div class="js-weather-markup weather" tabindex="0">
                 <button class="js-weather-markup-modal-trigger weather-settings-btn">
                     <svg class="weather-icon-gear" viewBox="0 0 268.765 268.765" aria-label="Choose the city">
                         <use xlink:href="#gear" />
                     </svg>
                 </button>
                 <div class="js-weather-now weather-now">
-                    <div class="js-weather-now-temp weather-now-temp" aria-label="now weather temperature">1</div>
-                    <svg class="weather-now-icon">
+                    <div class="js-weather-now-temp weather-now-temp" tabindex="0">1</div>
+                    <svg class="weather-now-icon" tabindex="0">
                         <use class="js-weather-now-icon" xlink:href="#02d" />
                     </svg>
                     <div class="weather-now-location">
                         <svg class="weather-icon-pin">
                             <use xlink:href="#pin" />
                         </svg>
-                        <span class="js-weather-city">City</span>
+                        <span class="js-weather-city" tabindex="0">City</span>
                     </div>
                 </div>
 
-                <ul class="js-weather-forecast weather-forecast">
-                    <li class="weather-forecast-item">
+                <ul class="js-weather-forecast weather-forecast" tabindex="0">
+                    <li class="weather-forecast-item" tabindex="0">
                         <span class="js-forecast-day">Mon</span>
                         <svg class="weather-forecast-icon">
                             <use class="js-forecast-icon" xlink:href="#02d" />
                         </svg>
                         <span class="js-forecast-temp wether-forecast-temp">0</span>
                     </li>
-                    <li class="weather-forecast-item">
+                    <li class="weather-forecast-item" tabindex="0">
                         <span class="js-forecast-day">Tue</span>
                         <svg class="weather-forecast-icon">
                             <use class="js-forecast-icon" xlink:href="#02d" />
                         </svg>
                         <span class="js-forecast-temp wether-forecast-temp">0</span>
                     </li>
-                    <li class="weather-forecast-item">
+                    <li class="weather-forecast-item" tabindex="0">
                         <span class="js-forecast-day">Wed</span>
                         <svg class="weather-forecast-icon">
                             <use class="js-forecast-icon" xlink:href="#02d" />
                         </svg>
                         <span class="js-forecast-temp wether-forecast-temp">0</span>
                     </li>
-                    <li class="weather-forecast-item">
+                    <li class="weather-forecast-item" tabindex="0">
                         <span class="js-forecast-day">Thu</span>
                         <svg class="weather-forecast-icon">
                             <use class="js-forecast-icon" xlink:href="#02d" />
@@ -2616,8 +2615,7 @@
                         <use xlink:href="#loader" />
                     </svg>
                 </div>
-                <span class="js-weather-live-error visually-hidden" aria-live="assertive"></span>
-                <span class="js-weather-live-status visually-hidden" aria-live="assertive"></span>
+                <span class="js-weather-live-error visually-hidden" role="alert" aria-live="assertive"></span>
             </div>
             <div class="js-weather-markup-modal modal"
                  tabindex="-1"
@@ -2635,7 +2633,7 @@
                                 <li role="option" data-value="2643743">London</li>
                                 <li role="option" data-value="2950159">Berlin</li>
                             </ul>
-                            <span class="select-live visually-hidden" aria-live="assertive"></span>
+                            <span class="select-live visually-hidden" role="alert" aria-live="assertive"></span>
                         </div>
 
                         <div class="modal-controls">
@@ -2718,58 +2716,58 @@
         </ul>
 
         <div class="container">
-            <div class="js-weather-final weather" aria-labelledby="js-weather-final-label" tabindex="1">
-                <h3 id="js-weather-final-label" class="visually-hidden" tabindex="0">Weather widget.</h3>
+            <div class="js-weather-final weather" aria-labelledby="js-weather-final-label" tabindex="0">
+                <h3 id="js-weather-final-label" class="visually-hidden">Weather widget.</h3>
+
+                <button class="js-weather-final-modal-trigger weather-settings-btn" aria-label="Choose the city">
+                    <svg class="weather-icon-gear" viewBox="0 0 268.765 268.765">
+                        <use xlink:href="#gear" />
+                    </svg>
+                </button>
 
                 <div class="js-weather-now weather-now">
                     <div class="weather-now-location">
                         <svg class="weather-icon-pin" aria-hidden="true">
                             <use xlink:href="#pin" />
                         </svg>
-                        <span class="js-weather-city" tabindex="3">City</span>
+                        <span class="js-weather-city" tabindex="0" role="">City</span>
                     </div>
-                    <div class="js-weather-now-temp weather-now-temp" tabindex="4">0</div>
-                    <svg class="weather-now-icon" tabindex="5">
+                    <div class="js-weather-now-temp weather-now-temp" tabindex="0" role="">0</div>
+                    <svg class="weather-now-icon" tabindex="0" role="">
                         <use class="js-weather-now-icon" xlink:href="#02d" />
                     </svg>
                 </div>
 
-                <ul class="js-weather-forecast weather-forecast" aria-label="Forecast." tabindex="6">
-                    <li class="weather-forecast-item" tabindex="7">
-                        <span class="js-forecast-day" tabindex="8">Mon</span>
-                        <svg class="weather-forecast-icon" tabindex="9">
-                            <use class="js-forecast-icon" xlink:href="#02d" />
-                        </svg>
-                        <span class="js-forecast-temp wether-forecast-temp" tabindex="10">0</span>
-                    </li>
-                    <li class="weather-forecast-item" tabindex="11">
-                        <span class="js-forecast-day" tabindex="12">Tue</span>
-                        <svg class="weather-forecast-icon" tabindex="13">
-                            <use class="js-forecast-icon" xlink:href="#02d" />
-                        </svg>
-                        <span class="js-forecast-temp wether-forecast-temp" tabindex="14">0</span>
-                    </li>
-                    <li class="weather-forecast-item" tabindex="15">
-                        <span class="js-forecast-day" tabindex="16">Wed</span>
+                <ul class="js-weather-forecast weather-forecast" aria-label="Forecast." tabindex="0">
+                    <li class="weather-forecast-item" tabindex="0">
+                        <span class="js-forecast-day">Mon</span>
                         <svg class="weather-forecast-icon">
                             <use class="js-forecast-icon" xlink:href="#02d" />
                         </svg>
-                        <span class="js-forecast-temp wether-forecast-temp" tabindex="17">0</span>
+                        <span class="js-forecast-temp wether-forecast-temp">0</span>
                     </li>
-                    <li class="weather-forecast-item" tabindex="18">
-                        <span class="js-forecast-day" tabindex="19">Thu</span>
-                        <svg class="weather-forecast-icon" tabindex="20">
+                    <li class="weather-forecast-item" tabindex="0">
+                        <span class="js-forecast-day">Tue</span>
+                        <svg class="weather-forecast-icon">
                             <use class="js-forecast-icon" xlink:href="#02d" />
                         </svg>
-                        <span class="js-forecast-temp wether-forecast-temp" tabindex="21">0</span>
+                        <span class="js-forecast-temp wether-forecast-temp">0</span>
+                    </li>
+                    <li class="weather-forecast-item" tabindex="0">
+                        <span class="js-forecast-day">Wed</span>
+                        <svg class="weather-forecast-icon">
+                            <use class="js-forecast-icon" xlink:href="#02d" />
+                        </svg>
+                        <span class="js-forecast-temp wether-forecast-temp">0</span>
+                    </li>
+                    <li class="weather-forecast-item" tabindex="0">
+                        <span class="js-forecast-day">Thu</span>
+                        <svg class="weather-forecast-icon">
+                            <use class="js-forecast-icon" xlink:href="#02d" />
+                        </svg>
+                        <span class="js-forecast-temp wether-forecast-temp">0</span>
                     </li>
                 </ul>
-
-                <button class="js-weather-final-modal-trigger weather-settings-btn" aria-label="Choose the city" tabindex="2">
-                    <svg class="weather-icon-gear" viewBox="0 0 268.765 268.765">
-                        <use xlink:href="#gear" />
-                    </svg>
-                </button>
 
                 <div class="weather-loading js-weather-loading">
                     <svg class="weather-icon-loader" viewBox="0 0 38 38">
@@ -2777,8 +2775,8 @@
                     </svg>
                 </div>
 
-                <span class="js-weather-live-error visually-hidden" aria-live="assertive"></span>
-                <span class="js-weather-live-status visually-hidden" aria-live="assertive"></span>
+                <span class="js-weather-live-error visually-hidden" role="alert" aria-live="assertive"></span>
+                <span class="js-weather-live-status visually-hidden" role="alert" aria-live="assertive"></span>
             </div>
             <div class="js-weather-final-modal modal"
                  tabindex="-1"
@@ -2796,7 +2794,7 @@
                                 <li role="option" data-value="2643743">London</li>
                                 <li role="option" data-value="2950159">Berlin</li>
                             </ul>
-                            <span class="select-live visually-hidden" aria-live="assertive"></span>
+                            <span class="select-live visually-hidden" role="alert" aria-live="assertive"></span>
                         </div>
 
                         <div class="modal-controls">
@@ -2853,6 +2851,29 @@
         <figcaption>
             <a href="https://www.w3.org/TR/wai-aria-practices-1.1/">www.w3.org/TR/wai-aria-practices-1.1</a>
         </figcaption>
+    </section>
+
+    <section class="slide clear" id="weblind">
+        <img class="cover" src="pictures/weblind.png" alt="weblind.ru screenshot">
+        <figcaption>
+            <a href="https://weblind.ru/">weblind.ru</a>
+        </figcaption>
+    </section>
+
+    <section class="slide clear " id="interesting-links">
+        <h2>Полезности</h2>
+
+        <p><a href="https://medium.com/web-standards/aria-live-regions-713f6a7813d3">Всё, что нужно знать про ARIA Live Regions</a></p>
+        <p><a href="http://sauron.org.ua/post/823">Атрибут role и его значения</a></p>
+
+        <style>
+            #interesting-links p {
+                font-size: 0.45em;
+            }
+            #interesting-links a {
+                cursor: pointer;
+            }
+        </style>
     </section>
 
     <section class="slide clear" id="thanks">

@@ -55,7 +55,6 @@ class Weather {
 		this.modal.onConfirm(() => {
 			this.getWeather(this.select.value());
 		});
-		console.trace('###:')
 	}
 	
 	getWeather(id) {
@@ -96,7 +95,9 @@ class Weather {
 	
 	updateWeather(opts) {
 		this.nowTempEl.textContent = opts.forecast[0].temp;
+		this.nowTempEl.setAttribute('aria-label', `${opts.forecast[0].temp}°`);
 		this.nowCityEl.textContent = opts.city;
+		this.nowCityEl.setAttribute('aria-label', `city ${opts.city}`);
 		this.nowWeatherEl.style['background-image'] = `url(${opts.picture})`;
 		this.nowIconEl.setAttribute('xlink:href', `#${opts.forecast[0].icon}`);
 		this.nowIconEl.parentNode.setAttribute('aria-label', opts.forecast[0].description);
@@ -104,10 +105,11 @@ class Weather {
 		
 		this.dayList.map((dayEl, i) => {
 			const day = opts.forecast[i + 1];
-			
+
 			dayEl.querySelector('.js-forecast-day').textContent = day.day.abbr;
 			dayEl.querySelector('.js-forecast-day').setAttribute('aria-label', day.day.fullName);
 			dayEl.querySelector('.js-forecast-temp').textContent = day.temp;
+			dayEl.querySelector('.js-forecast-temp').setAttribute('aria-label', `${day.temp}°`);
 			dayEl.querySelector('.js-forecast-icon').setAttribute('xlink:href', `#${day.icon}`);
 			dayEl.querySelector('.js-forecast-icon').parentNode.setAttribute('aria-label', day.description);
 		});
@@ -197,7 +199,7 @@ class WeatherNoA11y {
 		this.liveError = this.el.querySelector('.js-weather-live-error');
 		
 		// return;
-		console.trace('000:')
+
 		this.getWeather(this.defaultCity.id);
 		
 		this.modal.onConfirm(() => {
