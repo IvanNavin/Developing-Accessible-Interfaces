@@ -55,6 +55,7 @@ class Weather {
 		this.modal.onConfirm(() => {
 			this.getWeather(this.select.value());
 		});
+		console.trace('###:')
 	}
 	
 	getWeather(id) {
@@ -196,7 +197,7 @@ class WeatherNoA11y {
 		this.liveError = this.el.querySelector('.js-weather-live-error');
 		
 		// return;
-		
+		console.trace('000:')
 		this.getWeather(this.defaultCity.id);
 		
 		this.modal.onConfirm(() => {
